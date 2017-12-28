@@ -67,6 +67,7 @@ public class RandomMov : MonoBehaviour
             isRotatingLeft = false;
 
         }
+        isWandering = false;
 
     }
 
