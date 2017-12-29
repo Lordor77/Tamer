@@ -410,6 +410,58 @@ Transform:
   m_PrefabParentObject: {fileID: 4618663575428644, guid: dbaa58657db866140b989ca4a0fc01c2,
     type: 2}
   m_PrefabInternal: {fileID: 546401894}
+--- !u!1001 &588448466
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4017505354803488, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017505354803488, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 25.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017505354803488, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017505354803488, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017505354803488, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017505354803488, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017505354803488, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017505354803488, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798662574427734, guid: a04325a7dc30e0241b65c36ffbbba70f,
+        type: 2}
+      propertyPath: componentsToDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 1382155058}
+    - target: {fileID: 114798662574427734, guid: a04325a7dc30e0241b65c36ffbbba70f,
+        type: 2}
+      propertyPath: componentsToDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 1382155056}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &770677189
 Prefab:
   m_ObjectHideFlags: 0
@@ -1268,6 +1320,16 @@ Transform:
   m_PrefabParentObject: {fileID: 4540708268219622, guid: 3340040610682b24c9c64dfd2cfe63a0,
     type: 2}
   m_PrefabInternal: {fileID: 1381119442}
+--- !u!81 &1382155056 stripped
+AudioListener:
+  m_PrefabParentObject: {fileID: 81750064308322154, guid: 9d193d7e16687fc4499450a24068490a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1047178430}
+--- !u!20 &1382155058 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20649854546098312, guid: 9d193d7e16687fc4499450a24068490a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1047178430}
 --- !u!1001 &1397943867
 Prefab:
   m_ObjectHideFlags: 0
