@@ -504,6 +504,26 @@ Prefab:
       propertyPath: componentsToDisable.Array.data[3]
       value: 
       objectReference: {fileID: 478190026}
+    - target: {fileID: 54303031514150570, guid: a04325a7dc30e0241b65c36ffbbba70f,
+        type: 2}
+      propertyPath: m_Drag
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 54303031514150570, guid: a04325a7dc30e0241b65c36ffbbba70f,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153880234663173224, guid: a04325a7dc30e0241b65c36ffbbba70f,
+        type: 2}
+      propertyPath: m_YDrive.positionSpring
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 153880234663173224, guid: a04325a7dc30e0241b65c36ffbbba70f,
+        type: 2}
+      propertyPath: m_YDrive.maximumForce
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a04325a7dc30e0241b65c36ffbbba70f, type: 2}
   m_IsPrefabParent: 0
@@ -955,6 +975,11 @@ Prefab:
         type: 2}
       propertyPath: m_ConnectedAnchor.y
       value: 26.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 54245230626843742, guid: 9d193d7e16687fc4499450a24068490a,
+        type: 2}
+      propertyPath: m_Drag
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d193d7e16687fc4499450a24068490a, type: 2}
