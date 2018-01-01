@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(ConfigurableJoint))]
 [RequireComponent(typeof(PlayerMov))]
 public class PlayerController : MonoBehaviour
 {
@@ -8,25 +7,15 @@ public class PlayerController : MonoBehaviour
     private float speed = 5f;
     [SerializeField]
     private float lookSensitivity = 3f;
-    [SerializeField]
-    private float thrusterForce = 1000f;
-
-    [Header("Spring Settings:")]
-    [SerializeField]
-    private JointDriveMode jointMode = JointDriveMode.Position;
-    [SerializeField]
-    private float jointSpring = 20f;
-    [SerializeField]
-    private float jointMaxForce = 40f;
-
-
-    private ConfigurableJoint joint;
+    public bool OnGround;
+    private Rigidbody rb;
+   
     private PlayerMov motor;
     void Start()
     {
         motor = GetComponent<PlayerMov>();
-        joint = GetComponent<ConfigurableJoint>();
-        SetJointSettings(jointSpring);
+        OnGround = true;
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -58,24 +47,21 @@ public class PlayerController : MonoBehaviour
         //Apply camera rotation
         motor.Rotatecamera(_cameraRotationX);
 
-        //calc the thrusterforce based on player input
-        Vector3 _thrusterForce = Vector3.zero;
-        if (Input.GetButton("Jump"))
+        if (OnGround)
         {
-            _thrusterForce = Vector3.up * thrusterForce;
-            SetJointSettings(0f);
-        }
-        else
-        {
-            SetJointSettings(jointSpring);
-        }
-
-        //apply thrusterforce
-        motor.ApplyThruster(_thrusterForce);
+            if (Input.GetButtonDown("Jump"))
+            {
+                rb.velocity = new Vector3(0f, 6f, 0f);
+            //    OnGround = false;
+            }
+        }        
     }
 
-    private void SetJointSettings(float _jointSpring)
+    void OnCollisionEnter(Collision other)
     {
-        joint.yDrive = new JointDrive { mode = jointMode, positionSpring = _jointSpring, maximumForce = jointMaxForce };
+        if (other.gameObject.CompareTag("Tamer"))
+        {
+            OnGround = true;
+        }
     }
 }
