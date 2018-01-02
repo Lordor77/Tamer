@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private float lookSensitivity = 3f;
     public bool OnGround;
     private Rigidbody rb;
-   
+
     private PlayerMov motor;
     void Start()
     {
@@ -52,16 +52,18 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 rb.velocity = new Vector3(0f, 6f, 0f);
-            //    OnGround = false;
+                OnGround = false;
             }
-        }        
+        }
+        
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter (Collision other)
     {
-        if (other.gameObject.CompareTag("Tamer"))
+        if (other.gameObject.name == "Terrain")
         {
             OnGround = true;
         }
+
     }
 }
