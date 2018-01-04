@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33284303945751158}
   - component: {fileID: 65923557018392724}
   - component: {fileID: 23996108058246062}
+  - component: {fileID: 114304583446354474}
+  - component: {fileID: 114916800293799606}
   m_Layer: 0
   m_Name: EnemyMonster
   m_TagString: Untagged
@@ -90,8 +92,36 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1984494308042318}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114304583446354474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984494308042318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981bbdcec85c7d344ac3cb47124cd8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114916800293799606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984494308042318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c183b1711e31b40be961c1b1dd13dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movSpeed: 3
+  rotSpeed: 100
+  isWandering: 0
+  isRotatingLeft: 0
+  isRotatingRight: 0
+  isWalking: 0
