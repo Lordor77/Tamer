@@ -637,12 +637,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 1fef6b11-ed44-4368-96c3-3a0f489bcfe3
+  cloudProjectId: 33237435-1da3-4622-88da-529fabf46677
   projectName: making a 3d person camera
-  organizationId: inangel
+  organizationId: dor-1951438
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            health.CurrentVal -= 10;
+            //health.CurrentVal -= 10;
         }
 
         if (Input.GetKeyDown(KeyCode.O))
@@ -24,4 +24,14 @@ public class Player : MonoBehaviour {
             health.CurrentVal += 10;
         }
     }
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            Destroy(other.gameObject);
+            //health.CurrentVal -= 10;
+        }
+    }
+    */
 }
