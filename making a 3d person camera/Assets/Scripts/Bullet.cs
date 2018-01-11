@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour {
         if (other.CompareTag("Tamer"))
         {
             Destroy(gameObject);
-            //other.health.CurrentVal -= 10;
+            other.gameObject.GetComponent<Player>().health.CurrentVal -= 10;
         }
     }
 }
