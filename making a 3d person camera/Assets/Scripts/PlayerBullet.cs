@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour {
+public class PlayerBullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +16,12 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Tamer"))
+        if (other.CompareTag("EnemyMonster"))
         {
             Destroy(gameObject);
-            other.gameObject.GetComponent<Player>().health.CurrentVal -= 10;
+            other.gameObject.GetComponent<EnemyMonster>().health.CurrentVal -= 10;
+            if (other.gameObject.GetComponent<EnemyMonster>().health.CurrentVal <= 0)
+                Destroy(other.gameObject);
         }
     }
 }

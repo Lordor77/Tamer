@@ -839,7 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a571e20dec1f154ea992fc5561ecc12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Monster: {fileID: 1984494308042318, guid: a62b4d4f80125c14c9bc1af218668d22, type: 2}
+  Monster: {fileID: 1257437628510214, guid: b04a897464fbef148b5b5ec19c0750bb, type: 2}
 --- !u!4 &776163211
 Transform:
   m_ObjectHideFlags: 0

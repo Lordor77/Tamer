@@ -2,24 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shoot : MonoBehaviour {
+public class PlayerShoot : MonoBehaviour {
 
     // Variables
-    float timer;
-    [SerializeField] GameObject Bullet;
-    [SerializeField] GameObject Player;
+    [SerializeField]
+    GameObject Bullet;
 
-	// Use this for initialization
-	void Start () {
-		timer = Random.Range(1, 4);
-    }
+    // Use this for initialization
+    void Start () {
+		
+	}
 	
 	// Update is called once per frame
 	void Update () {
-        timer -= Time.deltaTime;
-        transform.LookAt(Player.transform);
-
-        if (timer <= 0) {
+		if(Input.GetKeyDown(KeyCode.E)) {
             // Create the Bullet from the Bullet Prefab
             var bullet = (GameObject)Instantiate(Bullet, this.transform.position, this.transform.rotation);
 
@@ -28,8 +24,6 @@ public class Shoot : MonoBehaviour {
 
             // Destroy the bullet after 2 seconds
             Destroy(bullet, 20.0f);
-
-            timer = Random.Range(1, 4);
         }
 	}
 }
