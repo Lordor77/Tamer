@@ -10,7 +10,6 @@ public class MonsterMove : MonoBehaviour
     private Vector3 rotation = Vector3.zero;
     private float cameraRotationX = 0f;
     private float currentCameraRotationX = 0f;
-    private Vector3 thrusterForce = Vector3.zero;
 
     [SerializeField]
     private float cameraRotationLimit = 85f;
@@ -40,11 +39,6 @@ public class MonsterMove : MonoBehaviour
         cameraRotationX = _cameraRotationX;
     }
 
-    // Get as force vector for our thrusters
-    public void ApplyThruster(Vector3 _thrusterForce)
-    {
-        thrusterForce = _thrusterForce;
-    }
 
     //Run every physics iteration
     void FixedUpdate()
@@ -61,10 +55,6 @@ public class MonsterMove : MonoBehaviour
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         }
 
-        if (thrusterForce != Vector3.zero)
-        {
-            rb.AddForce(thrusterForce * Time.fixedDeltaTime, ForceMode.Acceleration);
-        }
     }
     void PerFormRotation()
     {

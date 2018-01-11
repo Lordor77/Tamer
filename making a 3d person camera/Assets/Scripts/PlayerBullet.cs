@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerBullet : MonoBehaviour {
 
 	// Use this for initialization
@@ -19,9 +19,12 @@ public class PlayerBullet : MonoBehaviour {
         if (other.CompareTag("EnemyMonster"))
         {
             Destroy(gameObject);
-            other.gameObject.GetComponent<EnemyMonster>().health.CurrentVal -= 10;
-            if (other.gameObject.GetComponent<EnemyMonster>().health.CurrentVal <= 0)
+            other.gameObject.GetComponent<EnemyMonster>().EnemyHealth.CurrentVal -= 10;
+            if (other.gameObject.GetComponent<EnemyMonster>().EnemyHealth.CurrentVal <= 0)
+            {
                 Destroy(other.gameObject);
+                SceneManager.LoadScene("BasicScene");
+            }
         }
     }
 }

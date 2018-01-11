@@ -17,7 +17,7 @@ public class EnemyBullet : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Tamer"))
+        if (other.CompareTag("BuddyMonster"))
         {
             Destroy(gameObject);
             other.gameObject.GetComponent<Player>().health.CurrentVal -= 10;

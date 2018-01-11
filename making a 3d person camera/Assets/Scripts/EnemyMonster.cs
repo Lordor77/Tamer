@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyMonster : MonoBehaviour {
     [SerializeField]
-    public Stat health;
+    public Stat EnemyHealth;
 
     // Use this for initialization
     private void Awake()
     {
-        health.Initialize();
+        EnemyHealth.Initialize();
     }
 
     // Update is called once per frame
