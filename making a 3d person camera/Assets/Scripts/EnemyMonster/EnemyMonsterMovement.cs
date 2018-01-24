@@ -17,5 +17,6 @@ public class EnemyMonsterMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.LookAt(Player.transform);
+        //transform.Rotate(new Vector3(Player.transform.rotation.x, Player.transform.rotation.y, Player.transform.rotation.z));
     }
 }

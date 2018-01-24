@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class BarScript : MonoBehaviour {
     
+    // Variables
     private float fillAmount;
 
     [SerializeField]
     private Image content;
     [SerializeField]
-    private Text valueText;
+    public Text valueText;
     [SerializeField]
     private float lerpSpeed;
     public float MaxValue { get; set; }
@@ -20,6 +21,7 @@ public class BarScript : MonoBehaviour {
     private Color lowColor;
     [SerializeField]
     private bool lerpColors;
+
 
     public float Value
     {

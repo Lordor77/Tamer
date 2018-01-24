@@ -8,6 +8,10 @@ TagManager:
   - Bullet
   - EnemyMonster
   - BuddyMonster
+  - Attack_1
+  - Attack_2
+  - att_1_LoadingBar
+  - att_2_LoadingBar
   layers:
   - Default
   - TransparentFX
